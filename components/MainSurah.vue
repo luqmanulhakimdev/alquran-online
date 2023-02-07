@@ -65,7 +65,7 @@ export default {
 	created () {
 		this.id = this.$route.params.id
 	    axios
-	      .get('https://api.quran.sutanlab.id/surah/'+this.$route.params.id)
+	      .get('https://api.quran.gading.dev/surah/'+this.$route.params.id)
 	      .then(response => (this.surah = response.data.data))
 	}
 }

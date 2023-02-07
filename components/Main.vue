@@ -55,7 +55,7 @@ export default {
 	},
 	mounted () {
 	    axios
-	      .get('https://api.quran.sutanlab.id/surah')
+	      .get('https://api.quran.gading.dev/surah')
 	      .then(response => (this.surah = response.data.data))
 	}
 }

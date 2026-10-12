@@ -1,5 +1,17 @@
 # alquran-online
 
+## Tampilan Aplikasi
+
+| Beranda | Reader surah |
+| --- | --- |
+| ![Screenshot halaman beranda](docs/screenshots/homepage.png) | ![Screenshot halaman reader surah](docs/screenshots/surah-reader.png) |
+
+## Deploy Otomatis
+
+Workflow GitHub Actions berjalan setiap ada push ke branch `main`. Workflow memasang dependency dengan `npm ci`, membangun situs statis menggunakan `npm run generate`, menambahkan `.nojekyll` agar aset Nuxt di folder `_nuxt` tetap diterbitkan, lalu menerbitkan folder `dist` ke branch `gh-pages`.
+
+Pastikan **Settings → Pages → Build and deployment** memakai sumber **Deploy from a branch**, branch `gh-pages`, folder `/(root)`.
+
 ## Build Setup
 
 ```bash

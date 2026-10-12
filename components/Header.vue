@@ -1,90 +1,46 @@
 <template>
-	<div class="relative bg-white overflow-hidden">
-	  <div class="max-w-7xl mx-auto">
-	    <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-	      <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-	        <polygon points="50,0 100,0 50,100 0,100" />
-	      </svg>
-
-	      <div>
-	        <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
-	          <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
-	            <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-	              <div class="flex items-center justify-between w-full md:w-auto">
-	                <a href="#">
-	                  <span class="sr-only">Workflow</span>
-	                  <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg">
-	                </a>
-	                <div class="-mr-2 flex items-center md:hidden">
-	                  <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-	                    <span class="sr-only">Open main menu</span>
-	                    <!-- Heroicon name: outline/menu -->
-	                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-	                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-	                    </svg>
-	                  </button>
-	                </div>
-	              </div>
-	            </div>
-	            <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-	            	<NuxtLink to="/"><span class="font-medium text-indigo-600 hover:text-gray-900">Home</span></NuxtLink>
-	            </div>
-	          </nav>
-	        </div>
-
-	        <!--
-	          Mobile menu, show/hide based on menu open state.
-
-	          Entering: "duration-150 ease-out"
-	            From: "opacity-0 scale-95"
-	            To: "opacity-100 scale-100"
-	          Leaving: "duration-100 ease-in"
-	            From: "opacity-100 scale-100"
-	            To: "opacity-0 scale-95"
-	        -->
-	        <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-	          <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-	            <div class="px-5 pt-4 flex items-center justify-between">
-	              <div>
-	                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
-	              </div>
-	              <div class="-mr-2">
-	                <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-	                  <span class="sr-only">Close main menu</span>
-	                  <!-- Heroicon name: outline/x -->
-	                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-	                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-	                  </svg>
-	                </button>
-	              </div>
-	            </div>
-	            <div class="px-2 pt-2 pb-3 space-y-1">
-	              <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 hover:text-gray-900 hover:bg-gray-50">Home</a>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-
-	      <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-	        <div class="sm:text-center lg:text-left">
-	          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-	            <span class="block text-indigo-600 xl:inline">Alquran Online</span>
-	          </h1>
-	          <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-	            Baca Al Quran online, terdapat terjemahan bahasa indonesia dan audio.
-	          </p>
-	        </div>
-	      </main>
-	    </div>
-	  </div>
-	  <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-	    <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="/alquran-online/quran.jpeg" alt="">
-	  </div>
-	</div>
+  <header class="site-header">
+    <div class="page-container nav-inner">
+      <nuxt-link class="brand" to="/" aria-label="Al-Qur'an, beranda">
+        <span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M21.6 4.8a12.1 12.1 0 1 0 6.1 21.4A13 13 0 0 1 21.6 4.8Z"/><path class="brand-star" d="m19 7 .8 2.2L22 10l-2.2.8L19 13l-.8-2.2L16 10l2.2-.8L19 7Z"/></svg></span>
+        <span class="brand-copy"><strong>Al-Qur'an</strong><small>Cahaya untuk setiap hari</small></span>
+      </nuxt-link>
+      <button class="menu-toggle" type="button" :aria-expanded="menuOpen ? 'true' : 'false'" aria-controls="site-navigation" @click="menuOpen = !menuOpen"><span class="sr-only">{{ menuOpen ? 'Tutup menu' : 'Buka menu' }}</span><svg v-if="!menuOpen" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg v-else viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <nav id="site-navigation" class="site-nav" :class="{ 'is-open': menuOpen }" aria-label="Navigasi utama">
+        <nuxt-link to="/" exact @click.native="menuOpen = false">Beranda</nuxt-link>
+        <nuxt-link to="/#surah-list" @click.native="menuOpen = false">Daftar Surah</nuxt-link>
+        <button class="theme-toggle" type="button" :aria-label="theme === 'dark' ? 'Aktifkan mode terang' : 'Aktifkan mode gelap'" :title="theme === 'dark' ? 'Mode terang' : 'Mode gelap'" @click="toggleTheme"><svg v-if="theme !== 'dark'" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.1 15.2A8.3 8.3 0 0 1 8.8 3.9 8.5 8.5 0 1 0 20.1 15.2Z"/></svg><svg v-else viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="theme-label">{{ theme === 'dark' ? 'Terang' : 'Gelap' }}</span></button>
+      </nav>
+    </div>
+  </header>
 </template>
 
 <script>
 export default {
-  	name: 'Header'
+  name: 'Header',
+  data () {
+    return { menuOpen: false, theme: 'light' }
+  },
+  mounted () {
+    try {
+      this.theme = window.localStorage.getItem('alquran-theme') || 'light'
+    } catch (error) {
+      this.theme = 'light'
+    }
+    this.applyTheme()
+  },
+  methods: {
+    applyTheme () {
+      if (process.client) {
+        document.documentElement.setAttribute('data-theme', this.theme)
+        this.$root.$emit('theme-change', this.theme)
+      }
+    },
+    toggleTheme () {
+      this.theme = this.theme === 'dark' ? 'light' : 'dark'
+      this.applyTheme()
+      try { window.localStorage.setItem('alquran-theme', this.theme) } catch (error) {}
+    }
+  }
 }
 </script>
